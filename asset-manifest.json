@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/bidprosapp/static/css/main.a617e044.chunk.css",
+    "main.js": "/bidprosapp/static/js/main.a760dee1.chunk.js",
+    "main.js.map": "/bidprosapp/static/js/main.a760dee1.chunk.js.map",
+    "runtime-main.js": "/bidprosapp/static/js/runtime-main.d2f1ef7c.js",
+    "runtime-main.js.map": "/bidprosapp/static/js/runtime-main.d2f1ef7c.js.map",
+    "static/js/2.f70c0623.chunk.js": "/bidprosapp/static/js/2.f70c0623.chunk.js",
+    "static/js/2.f70c0623.chunk.js.map": "/bidprosapp/static/js/2.f70c0623.chunk.js.map",
+    "static/js/3.905cb411.chunk.js": "/bidprosapp/static/js/3.905cb411.chunk.js",
+    "static/js/3.905cb411.chunk.js.map": "/bidprosapp/static/js/3.905cb411.chunk.js.map",
+    "index.html": "/bidprosapp/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/bidprosapp/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.f70c0623.chunk.js.LICENSE.txt": "/bidprosapp/static/js/2.f70c0623.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/bidprosapp/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2f1ef7c.js",
+    "static/js/2.f70c0623.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.a760dee1.chunk.js"
+  ]
+}
