@@ -7,7 +7,7 @@ export default class Events extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('https://jeffmcrockett.github.io/bidprosapi/events')
+        axios.get('http://localhost:3000/api/events')
         .then(res => {
             const events = res.data;
             this.setState({ events });
@@ -16,9 +16,11 @@ export default class Events extends React.Component {
 
     render() {
         return (
-            <ul>
-                { this.state.events.map(event => <li>{event.name}</li>) }
-            </ul>
+            <div className="container">
+                <ul>
+                    {this.state.events.map(event => <li>{event.name}</li>)}
+                </ul>
+            </div>
         )
     }
 }

@@ -3,9 +3,8 @@ import axios from 'axios';
 
 export default class items extends React.Component {
     state = {
-        item: {}
+        items: {}
     }
-    // HOW DO THESE LINE UP WITH THE SCHEMA OR DO THEY NOT?
 
     handleChange = event => {
         this.setState ({ item: event.target.value });
@@ -16,12 +15,11 @@ export default class items extends React.Component {
 
         const item = {
             name: this.state.name,
-            event: this.state.event,
             description: this.state.description,
             value: this.state.value
         };
 
-        axios.post('https://jeffmcrockett.github.io/bidprosapi/items', { item })
+        axios.post('http://localhost:3000/api/items', { item })
         .then(res => {
             console.log(res);
             console.log(res.data);
