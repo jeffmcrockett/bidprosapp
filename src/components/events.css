@@ -1,20 +1,27 @@
 .eventsContainer {
     background-color: rgb(78, 199, 152);
-    height: 400px;
+    height: 1000px;
 }
-.events2Container {
-    display: flex;
-    background-color: white;
-    justify-content: center;
-}
+
 h1 {
     font-size: 48px;
     color: white;
     font-family: georgia;
     text-shadow: 2px 2px black;
-    margin-top: 50px;
     margin-bottom: 20px;
+    margin-top: 0px;
 }
 .cardRoot1 {
-    width: 400px;
+    width: 550px;
+}
+.cardMedia1 {
+    height: 180px;
+    background-image: url(../images/building.jpg);
+    box-shadow: black;
+}
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-right: 80px;
 }

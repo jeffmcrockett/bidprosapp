@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import "./events.css";
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -26,23 +25,24 @@ export default class Events extends React.Component {
     render() {
         return (
             <div className="eventsContainer">
+                <br />
                 <h1>Events</h1>
                     <ul>
                         {this.state.events.map(event =>
                             <ul>
-                                <Card className="cardRoot1">
+                                <Card className="cardRoot1" boxShadow={2}>
                                     <CardActionArea>
                                         <CardMedia
+                                            wide
+                                            component="img"
                                             className="cardMedia1"
-                                            image="../images/buildings.png"
-                                            title="Skyline"
                                         />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="h2">
                                                 {event.name}
                                             </Typography>
                                             <Typography variant="body2" color="textSecondary" component="p">
-                                                {event.organization}
+                                                Hosted by: {event.organization}
                                             </Typography>
                                         </CardContent>
                                     </CardActionArea>
