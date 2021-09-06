@@ -1,4 +1,19 @@
 .eventsContainer {
     background-color: rgb(78, 199, 152);
-    height: 150px;
+    height: 400px;
+}
+.events2Container {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+h1 {
+    font-size: 48px;
+    color: white;
+    font-family: georgia;
+    text-shadow: 2px 2px black;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './item.css';
 
 export default class Items extends React.Component {
     state = {

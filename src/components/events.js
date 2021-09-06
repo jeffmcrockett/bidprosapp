@@ -18,9 +18,12 @@ export default class Events extends React.Component {
     render() {
         return (
             <div className="eventsContainer">
+                <h1>Events</h1>
+                <div className="events2Container">
                 <ul>
-                    {this.state.events.map(event => <li>{event.name}{event.organization}</li>)}
+                    {this.state.events.map(event => <li>{event.name}<br></br>{event.organization}</li>)}
                 </ul>
+                </div>
             </div>
         )
     }
