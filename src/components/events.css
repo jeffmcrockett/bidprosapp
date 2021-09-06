@@ -6,8 +6,6 @@
     display: flex;
     background-color: white;
     justify-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
 }
 h1 {
     font-size: 48px;
@@ -16,4 +14,7 @@ h1 {
     text-shadow: 2px 2px black;
     margin-top: 50px;
     margin-bottom: 20px;
+}
+.cardRoot1 {
+    width: 400px;
 }
