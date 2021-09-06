@@ -13,9 +13,11 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar />
+        <Home />
+        <Events />
         <Switch>
           <Route exact path="/" component={<Home />} />
-          <Route path="/events" component={Events} />
+          <Route path="/events" component={<Events />} />
         </Switch>
       </BrowserRouter>
     </div>

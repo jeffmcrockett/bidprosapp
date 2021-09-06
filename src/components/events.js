@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import "./events.css";
 
 export default class Events extends React.Component {
     state = {
@@ -16,9 +17,9 @@ export default class Events extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="eventsContainer">
                 <ul>
-                    {this.state.events.map(event => <li>{event.name}</li>)}
+                    {this.state.events.map(event => <li>{event.name}{event.organization}</li>)}
                 </ul>
             </div>
         )
