@@ -39,7 +39,9 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 export class Home extends React.Component {
-
+  render() {
+    return (console.log("Maybe this works?!"))
+  }
 };
 
 export default function SignIn() {
