@@ -38,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
+export default class Home extends React.Component {
+
+};
+
 export default function SignIn() {
     const classes = useStyles();
   
