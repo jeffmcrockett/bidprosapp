@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './item.css';
 
-export default class items extends React.Component {
+export default class Item extends React.Component {
     state = {
         items: {}
     }
