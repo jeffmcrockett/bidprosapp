@@ -17,11 +17,11 @@ function App() {
         <h3>STILL WORKING OUT A FEW THINGS, WILL BE DONE BY EOD SEPT 8</h3>
         <Home />
         <Events />
-        <Switch>
+        {/* <Switch>
           <Route exact path="/" component={<Home />} />
           <Route path="/events" component={<Events />} />
           <Route path="/items" component={<Items />} />
-        </Switch>
+        </Switch> */}
       </BrowserRouter>
     </div>
   );
