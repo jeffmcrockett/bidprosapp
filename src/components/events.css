@@ -1,8 +1,13 @@
 .eventsContainer {
-    background-color: rgb(78, 199, 152);
-    height: 1000px;
+    background-color: grey;
+    height: auto;
 }
-
+.eventTable {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+}
 h1 {
     font-size: 48px;
     color: white;
@@ -12,16 +17,16 @@ h1 {
     margin-top: 0px;
 }
 .cardRoot1 {
-    width: 550px;
+    width: 450px;
 }
 .cardMedia1 {
     height: 180px;
     background-image: url(../images/building.jpg);
-    box-shadow: black;
 }
 ul {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    margin-right: 80px;
+    justify-content: center;
+    margin-right: 75px;
+    margin-left: 20px;
+    margin-bottom: 80px;
 }

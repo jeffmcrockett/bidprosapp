@@ -15,7 +15,7 @@ export default class Events extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:3000/api/events')
+        axios.get('http://bidprosapi.herokuapp.com/api/events')
             .then(res => {
                 const events = res.data;
                 this.setState({ events });
@@ -27,13 +27,12 @@ export default class Events extends React.Component {
             <div className="eventsContainer">
                 <br />
                 <h1>Events</h1>
-                    <ul>
+                    <ul className="eventTable">
                         {this.state.events.map(event =>
-                            <ul>
-                                <Card className="cardRoot1" boxShadow={2}>
+                            <ul className="eventCards">
+                                <Card className="cardRoot1">
                                     <CardActionArea>
                                         <CardMedia
-                                            wide
                                             component="img"
                                             className="cardMedia1"
                                         />
