@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default class Home extends React.Component {
+export class Home extends React.Component {
 
 };
 
