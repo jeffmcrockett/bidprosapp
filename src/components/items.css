@@ -1,8 +1,8 @@
-.eventsContainer {
-    background-color: grey;
+.itemsContainer {
+    background-color: lightslategrey;
     height: auto;
 }
-.eventTable {
+.itemTable {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -16,12 +16,16 @@ h1 {
     margin-bottom: 20px;
     margin-top: 0px;
 }
-.cardRoot1 {
-    width: 450px;
+.itemTitle {
+    color: lightskyblue;
 }
-.cardMedia1 {
+.cardRoot2 {
+    width: 450px;
+    background-color: lightgray;
+}
+.cardMedia2 {
     height: 180px;
-    background-image: url(../images/building.jpg);
+    background-image: url(../images/pricetag.jpg);
 }
 ul {
     display: flex;
