@@ -1,10 +1,11 @@
 import './App.css';
 import Events from './components/events.js';
-import Home from './components/home.js';
+import Login from './components/login.js';
 import Items from './components/items.js';
 import Item from './components/item.js';
+import Registration from './components/registration.js';
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import NavBar from "./components/navBar.js";
 
 function App() {
@@ -13,10 +14,28 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <h3>STILL WORKING OUT A FEW THINGS, WILL BE DONE BY EOD SEPT 8</h3>
-        <Home />
-        <Events />
-        <Items />
-        <Item />
+        <Link to="/">Login</Link>
+        <Link to ="/registration">Registration</Link>
+        <Link to="/events">Events</Link>
+        <Link to="/items">Items</Link>
+        <Link to="/item">Item</Link>
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="/registration">
+            <Registration />
+          </Route>
+          <Route path="/events">
+            <Events />
+          </Route>
+          <Route path="/items">
+            <Items />
+          </Route>
+          <Route path="/item">
+            <Item />
+          </Route>
+        </Switch>
       </BrowserRouter>
     </div>
   );

@@ -36,14 +36,15 @@ export default class Item extends React.Component {
                 <form className="itemForm" noValidate>
                     <TextField variant="outlined" margin="normal" required
                         fullWidth id="name" label="Item Name" name="name"
-                        autoComplete="name" autoFocus />
+                        autoComplete="name" autoFocus onChange={this.handleChange} />
                     <TextField variant="outlined" margin="normal" required
                         fullWidth name="description" label="Description" type="description"
-                        id="description" autoComplete="description" />
+                        id="description" autoComplete="description" onChange={this.handleChange} />
                     <TextField variant="outlined" margin="normal" required
                         fullWidth name="value" label="Item Value" type="value"
-                        id="value" autoComplete="value" />
-                    <Button type="submit" fullWidth variant="contained" color="primary" className="submitItem">
+                        id="value" autoComplete="value" onChange={this.handleChange} />
+                    <Button type="submit" fullWidth variant="contained" color="primary" 
+                        className="submitItem" onSubmit={this.handleSubmit}>
                         Save Changes
                     </Button>
                 </form>
