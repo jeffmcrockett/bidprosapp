@@ -4,7 +4,7 @@ import './weather.css';
 
 export default class Weather extends React.Component {
     state = {
-        weatherData = []
+        weatherData: []
     }
 
     componentDidMount() {

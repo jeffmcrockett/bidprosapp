@@ -14,12 +14,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        <Link to="/"></Link>
-        <Link to ="/registration"></Link>
-        <Link to="/events"></Link>
-        <Link to="/items"></Link>
-        <Link to="/item"></Link>
-        <Link to="/weather"></Link>
+        <Link to="/">login</Link>
+        <Link to ="/registration">Registration</Link>
+        <Link to="/events">Events</Link>
+        <Link to="/items">Items</Link>
+        <Link to="/item">Item</Link>
+        <Link to="/weather">Weather</Link>
         <Switch>
           <Route exact path="/">
             <Login />
