@@ -35,6 +35,10 @@ export default class Login extends React.Component {
         });
     }
 
+    handleNewUser = () => {
+        window.location.href="https://bidprosapp.herokuapp.com/registration"
+    }
+
     render() {
         return (
             <div className="loginContainer">
@@ -52,6 +56,10 @@ export default class Login extends React.Component {
                         Sign In
                     </Button>
                 </form>
+                <br></br>
+                <Button onClick={ () => this.handleNewUser()} fullWidth variant="contained" color="primary" className="submitItem">
+                    Create User
+                </Button>
                 <h3>user: jeffmcrockett@gmail.com</h3>
                 <h3>password: password</h3>
             </div>

@@ -32,7 +32,7 @@ export default class User extends React.Component {
 
     render() {
         return (
-            <div className="itemContainer2">
+            <div className="registerContainer">
                 <h1 className="itemTitle">Create/Update Item</h1>
                 <form className="itemForm" noValidate>
                     <TextField variant="outlined" margin="normal" required

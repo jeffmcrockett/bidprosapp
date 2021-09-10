@@ -45,11 +45,13 @@ export default class Item extends React.Component {
             const description = this.state.description;
             const value = this.state.value;
             console.log(this.state._id);
+            let eventId = window.location.pathname.split("/")[2];
             axios.put(`https://bidprosapi.herokuapp.com/api/items/${this.state._id}`, { name, description, value })
             .then(res => {
                 const item = res.data;
                 this.setState( item );
                 console.log(item);
+                window.location.href="https://bidprosapp.herokuapp.com/items/"+eventId;
             })
         }
         else {

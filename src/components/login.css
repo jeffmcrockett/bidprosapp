@@ -1,0 +1,13 @@
+.loginContainer {
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+Button {
+    margin-top: 25px;
+}
+
+TextField {
+    margin-bottom: 30px;
+}
