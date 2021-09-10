@@ -52,6 +52,8 @@ export default class Login extends React.Component {
                         Sign In
                     </Button>
                 </form>
+                <h3>user: jeffmcrockett@gmail.com</h3>
+                <h3>password: password</h3>
             </div>
         )
     }

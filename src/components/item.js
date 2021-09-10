@@ -6,20 +6,22 @@ import TextField from '@material-ui/core/TextField';
 
 export default class Item extends React.Component {
     state = {
-        name: "",
-        description: "",
-        value: "",
-        _id: ""
+        name: '',
+        description: '',
+        value: '',
+        _id: null
     }
 
     componentDidMount() {
-        let itemId = window.location.pathname.split("/")[2];
-        axios.get('http://bidprosapi.herokuapp.com/api/items/'+itemId)
-            .then(res => {
-                const item = res.data[0];
-                this.setState( item );
-                console.log(item);
-            })
+        if(window.location.pathname.split("/")[3] !== 'undefined') {
+            let itemId = window.location.pathname.split("/")[3];
+            axios.get('http://bidprosapi.herokuapp.com/api/items/'+itemId)
+                .then(res => {
+                    const item = res.data[0];
+                    this.setState( item );
+                    console.log(item);
+                })
+        }
     }
 
     handleNameChange = event => {
@@ -39,22 +41,34 @@ export default class Item extends React.Component {
 
         console.log(this.state)
         if (!!this.state._id) {
+            const name = this.state.name;
+            const description = this.state.description;
+            const value = this.state.value;
+            console.log(this.state._id);
             const item = this.state;
-            axios.put(`https://bidprosapi.herokuapp.com/api/items/${this.state._id}`, { item })
+            axios.put(`https://bidprosapi.herokuapp.com/api/items/${this.state._id}`, { name, description, value })
             .then(res => {
-                const item = res.data[0];
+                const item = res.data;
                 this.setState( item );
                 console.log(item);
             })
         }
         else {
-        const item = this.state;
-        axios.post('https://bidprosapi.herokuapp.com/api/items/', { item })
+        const name = this.state.name;
+        const description = this.state.description;
+        const value = this.state.value;
+        let eventId = window.location.pathname.split("/")[2];
+        axios.post('https://bidprosapi.herokuapp.com/api/items/'+eventId, { name, description, value })
             .then(res => {
-                const item = res.data[0];
+                const item = res.data;
                 this.setState( item );
-                console.log(item);
+                window.location.href="http://localhost:3001/items/"+eventId;
             })
+            .catch(error => {
+              if (error.response) {
+                console.log(error.response);
+              }
+            });
         }
     }
 

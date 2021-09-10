@@ -32,7 +32,7 @@ function App() {
           <Route path="/items/:eventId">
             <Items />
           </Route>
-          <Route path="/item/:itemId">
+          <Route path="/item/:eventId/:itemId">
             <Item />
           </Route>
         </Switch>

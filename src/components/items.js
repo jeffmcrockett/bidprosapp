@@ -25,7 +25,16 @@ export default class Items extends React.Component {
     }
 
     handleSubmit(id) {
-        window.location.href="http://localhost:3001/item/"+id
+        let eventId = window.location.pathname.split("/")[2];
+        window.location.href="http://localhost:3001/item/"+eventId+"/"+id
+    }
+
+    handleDelete(id) {
+        let eventId = window.location.pathname.split("/")[2];
+        axios.delete('http://bidprosapi.herokuapp.com/api/items/'+id)
+        .then(res => {
+            // window.location.href="https://localhost:3001/items/"+eventId
+        })
     }
 
     render() {
@@ -57,6 +66,9 @@ export default class Items extends React.Component {
                                     <CardActions>
                                         <Button size="small" color="primary" onClick={ () => this.handleSubmit(item._id)}>
                                             Edit Item
+                                        </Button>
+                                        <Button size="small" color="primary" onClick={ () => this.handleDelete(item._id)}>
+                                            Delete Item
                                         </Button>
                                     </CardActions>
                                 </Card>
