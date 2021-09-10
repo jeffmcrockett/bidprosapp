@@ -11,3 +11,7 @@ Button {
 TextField {
     margin-bottom: 30px;
 }
+
+.createUserButton {
+    margin-top: 30px;
+}
