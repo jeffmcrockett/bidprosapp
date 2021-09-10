@@ -1,15 +1,13 @@
 .itemsContainer {
     background-color: lightslategrey;
     height: auto;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
 }
 .itemTable {
     display: flex;
-    justify-content: center;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     flex-wrap: wrap;
-    width: auto;
 }
 h1 {
     font-size: 48px;
