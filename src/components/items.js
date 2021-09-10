@@ -45,7 +45,7 @@ export default class Items extends React.Component {
                 <Button variant="contained" color="primary" onClick={ () => this.handleSubmit()}>
                     Create New Item
                 </Button>
-                    <ul className="item">
+                    <ul className="itemGroup">
                         {this.state.items.map(item =>
                             <ul className="itemCards">
                                 <Card className="cardRoot2">
