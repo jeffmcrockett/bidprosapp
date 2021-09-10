@@ -15,7 +15,7 @@ export default class Events extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://bidprosapi.herokuapp.com/api/events')
+        axios.get('https://bidprosapi.herokuapp.com/api/events')
             .then(res => {
                 const events = res.data;
                 this.setState({ events });

@@ -13,7 +13,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        <h3>STILL WORKING OUT A FEW THINGS, WILL BE DONE BY EOD SEPT 9</h3>
         <Link to="/">Login</Link>
         <Link to ="/registration">Registration</Link>
         <Link to="/events">Events</Link>

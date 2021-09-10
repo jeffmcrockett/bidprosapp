@@ -23,7 +23,7 @@ export default class User extends React.Component {
             password: this.state.password
         };
 
-        axios.post('http://localhost:3000/api/users/:eventId', { user })
+        axios.post('https://bidprosapi.herokuapp.com/api/users/:eventId', { user })
             .then(res => {
                 console.log(res);
                 console.log(res.data);

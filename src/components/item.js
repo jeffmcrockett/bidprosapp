@@ -15,7 +15,7 @@ export default class Item extends React.Component {
     componentDidMount() {
         if(window.location.pathname.split("/")[3] !== 'undefined') {
             let itemId = window.location.pathname.split("/")[3];
-            axios.get('http://bidprosapi.herokuapp.com/api/items/'+itemId)
+            axios.get('https://bidprosapi.herokuapp.com/api/items/'+itemId)
                 .then(res => {
                     const item = res.data[0];
                     this.setState( item );
@@ -45,7 +45,6 @@ export default class Item extends React.Component {
             const description = this.state.description;
             const value = this.state.value;
             console.log(this.state._id);
-            const item = this.state;
             axios.put(`https://bidprosapi.herokuapp.com/api/items/${this.state._id}`, { name, description, value })
             .then(res => {
                 const item = res.data;

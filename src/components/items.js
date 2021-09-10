@@ -16,7 +16,7 @@ export default class Items extends React.Component {
 
     componentDidMount() {
         let eventId = window.location.pathname.split("/")[2];
-        axios.get('http://bidprosapi.herokuapp.com/api/items/event/'+eventId)
+        axios.get('https://bidprosapi.herokuapp.com/api/items/event/'+eventId)
             .then(res => {
                 const items = res.data;
                 this.setState({ items });
@@ -31,7 +31,7 @@ export default class Items extends React.Component {
 
     handleDelete(id) {
         // let eventId = window.location.pathname.split("/")[2];
-        axios.delete('http://bidprosapi.herokuapp.com/api/items/'+id)
+        axios.delete('https://bidprosapi.herokuapp.com/api/items/'+id)
         .then(res => {
             // window.location.href="https://localhost:3001/items/"+eventId
         })
