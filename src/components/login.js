@@ -30,7 +30,7 @@ export default class Login extends React.Component {
         axios.get(`https://bidprosapi.herokuapp.com/api/users/login/${this.state.email}/${this.state.password}`)
             .then(res => {
                 if (res) {
-                    window.location.href="https://bidprosapi.herokuapp.com/api/events"
+                    window.location.href="https://bidprosapp.herokuapp.com/api/events"
             }
         });
     }

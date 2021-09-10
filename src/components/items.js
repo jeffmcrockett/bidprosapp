@@ -26,11 +26,11 @@ export default class Items extends React.Component {
 
     handleSubmit(id) {
         let eventId = window.location.pathname.split("/")[2];
-        window.location.href="https://bidprosapi.herokuapp.com/api/item/"+eventId+"/"+id
+        window.location.href="https://bidprosapp.herokuapp.com/api/item/"+eventId+"/"+id
     }
 
     handleDelete(id) {
-        let eventId = window.location.pathname.split("/")[2];
+        // let eventId = window.location.pathname.split("/")[2];
         axios.delete('http://bidprosapi.herokuapp.com/api/items/'+id)
         .then(res => {
             // window.location.href="https://localhost:3001/items/"+eventId
