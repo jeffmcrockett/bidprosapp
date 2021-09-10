@@ -39,6 +39,10 @@ export default class Login extends React.Component {
         window.location.href="https://bidprosapp.herokuapp.com/registration"
     }
 
+    handleWeatherAPI = () => {
+        window.location.href="https://bidprosapp.herokuapp.com/weather"
+    }
+
     render() {
         return (
             <div className="loginContainer">
@@ -59,6 +63,12 @@ export default class Login extends React.Component {
                 <br></br>
                 <Button className="createUserButton" onClick={ () => this.handleNewUser()} fullWidth variant="contained" color="primary">
                     Create User
+                </Button>
+                <br></br>
+                <br></br>
+                <br></br> 
+                <Button className="createUserButton" onClick={ () => this.handleWeatherAPI()} fullWidth variant="contained" color="primary">
+                    3rd Party Weather API
                 </Button>
             </div>
         )
