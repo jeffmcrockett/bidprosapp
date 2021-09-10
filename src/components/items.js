@@ -26,7 +26,7 @@ export default class Items extends React.Component {
 
     handleSubmit(id) {
         let eventId = window.location.pathname.split("/")[2];
-        window.location.href="https://bidprosapp.herokuapp.com/api/item/"+eventId+"/"+id
+        window.location.href="https://bidprosapp.herokuapp.com/item/"+eventId+"/"+id
     }
 
     handleDelete(id) {

@@ -23,7 +23,7 @@ export default class Events extends React.Component {
     }
 
     handleSubmit(id) {
-        window.location.href="https://bidprosapp.herokuapp.com/api/items/"+id
+        window.location.href="https://bidprosapp.herokuapp.com/items/"+id
     }
 
     render() {
