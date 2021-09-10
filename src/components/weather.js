@@ -13,6 +13,7 @@ export default class Weather extends React.Component {
             const weatherData = res.data;
             this.setState({ weatherData });
             console.log(weatherData);
+            console.log(this.state);
         });
     }
 
