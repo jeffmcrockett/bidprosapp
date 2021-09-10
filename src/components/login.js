@@ -57,7 +57,7 @@ export default class Login extends React.Component {
                     </Button>
                 </form>
                 <br></br>
-                <Button className="createUserButton" onClick={ () => this.handleNewUser()} fullWidth variant="contained" color="primary" className="submitItem">
+                <Button className="createUserButton" onClick={ () => this.handleNewUser()} fullWidth variant="contained" color="primary">
                     Create User
                 </Button>
             </div>

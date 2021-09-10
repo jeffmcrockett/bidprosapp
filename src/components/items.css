@@ -4,9 +4,6 @@
 }
 .itemTable {
     display: flex;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
     flex-wrap: wrap;
 }
 h1 {
@@ -45,4 +42,9 @@ ul {
     display: flex;
     flex-direction: column;
     width: 700px;
+}
+.item {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
