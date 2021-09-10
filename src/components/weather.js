@@ -23,7 +23,6 @@ export default class Weather extends React.Component {
                 <br></br>
                 <div className="weatherTable">
                     <h3>Current Weather</h3>
-                    {/* <p>{this.state.weatherData.current.weather[0].main}</p> */}
                 </div>
             </div>
         )
