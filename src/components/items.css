@@ -18,19 +18,12 @@ h1 {
     color: lightskyblue;
 }
 .cardRoot2 {
-    width: 450px;
+    width: 400px;
     background-color: lightgray;
 }
 .cardMedia2 {
     height: 180px;
     background-image: url(../images/pricetag.jpg);
-}
-ul {
-    display: flex;
-    justify-content: center;
-    margin-right: 75px;
-    margin-left: 20px;
-    margin-bottom: 80px;
 }
 .itemContainer2 {
     display: flex;
@@ -45,9 +38,7 @@ ul {
 }
 .itemGroup {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
