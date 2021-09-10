@@ -62,7 +62,7 @@ export default class Item extends React.Component {
             .then(res => {
                 const item = res.data;
                 this.setState( item );
-                window.location.href="http://localhost:3001/items/"+eventId;
+                window.location.href="https://bidprosapi.herokuapp.com/api/items/"+eventId;
             })
             .catch(error => {
               if (error.response) {
