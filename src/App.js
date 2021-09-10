@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <NavBar />
-        <h3>STILL WORKING OUT A FEW THINGS, WILL BE DONE BY EOD SEPT 8</h3>
+        <h3>STILL WORKING OUT A FEW THINGS, WILL BE DONE BY EOD SEPT 9</h3>
         <Link to="/">Login</Link>
         <Link to ="/registration">Registration</Link>
         <Link to="/events">Events</Link>
@@ -29,10 +29,10 @@ function App() {
           <Route path="/events">
             <Events />
           </Route>
-          <Route path="/items">
+          <Route path="/items/:eventId">
             <Items />
           </Route>
-          <Route path="/item">
+          <Route path="/item/:itemId">
             <Item />
           </Route>
         </Switch>

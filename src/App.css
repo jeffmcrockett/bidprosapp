@@ -41,3 +41,10 @@ h3 {
   color: red;
   font-size: 40px;
 }
+
+a {
+  color: #FFF;
+}
+a:hover {
+   color: lightgray
+}

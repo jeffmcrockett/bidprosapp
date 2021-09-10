@@ -22,6 +22,10 @@ export default class Events extends React.Component {
             })
     }
 
+    handleSubmit(id) {
+        window.location.href="http://localhost:3001/items/"+id
+    }
+
     render() {
         return (
             <div className="eventsContainer">
@@ -31,11 +35,8 @@ export default class Events extends React.Component {
                         {this.state.events.map(event =>
                             <ul className="eventCards">
                                 <Card className="cardRoot1">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            className="cardMedia1"
-                                        />
+                                    <CardActionArea onClick={ () => this.handleSubmit(event._id)}>
+                                        <CardMedia component="img" className="cardMedia1" />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="h2">
                                                 {event.name}
@@ -46,7 +47,7 @@ export default class Events extends React.Component {
                                         </CardContent>
                                     </CardActionArea>
                                     <CardActions>
-                                        <Button size="small" color="primary">
+                                        <Button size="small" color="primary" onClick={ () => this.handleSubmit(event._id)}>
                                             Select Event
                                         </Button>
                                     </CardActions>

@@ -15,7 +15,8 @@ export default class Items extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://bidprosapi.herokuapp.com/api/items')
+        let eventId = window.location.pathname.split("/")[2];
+        axios.get('http://bidprosapi.herokuapp.com/api/items/event/'+eventId)
             .then(res => {
                 const items = res.data;
                 this.setState({ items });
@@ -23,20 +24,24 @@ export default class Items extends React.Component {
             })
     }
 
+    handleSubmit(id) {
+        window.location.href="http://localhost:3001/item/"+id
+    }
+
     render() {
         return (
             <div className="itemsContainer">
                 <br />
                 <h1>Items</h1>
+                <Button variant="contained" color="primary" onClick={ () => this.handleSubmit()}>
+                    Create New Item
+                </Button>
                     <ul className="item">
                         {this.state.items.map(item =>
                             <ul className="itemCards">
                                 <Card className="cardRoot2">
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            className="cardMedia2"
-                                        />
+                                    <CardActionArea onClick={ () => this.handleSubmit(item._id)}>
+                                        <CardMedia component="img" className="cardMedia2" />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="h2">
                                                 {item.name}
@@ -50,7 +55,7 @@ export default class Items extends React.Component {
                                         </CardContent>
                                     </CardActionArea>
                                     <CardActions>
-                                        <Button size="small" color="primary">
+                                        <Button size="small" color="primary" onClick={ () => this.handleSubmit(item._id)}>
                                             Edit Item
                                         </Button>
                                     </CardActions>

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-// import './registration.css';
+import './registration.css';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 
@@ -17,10 +17,10 @@ export default class User extends React.Component {
         event.preventDefault();
 
         const user = {
-            firstName= this.state.firstName,
-            lastName= this.state.lastName,
-            email= this.state.email,
-            password= this.state.password
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            email: this.state.email,
+            password: this.state.password
         };
 
         axios.post('http://localhost:3000/api/users/:eventId', { user })
