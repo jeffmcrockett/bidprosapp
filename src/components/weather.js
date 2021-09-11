@@ -13,6 +13,10 @@ export default class Weather extends React.Component {
             const weatherData = res.data;
             this.setState({ weatherData });
             console.log(this.state);
+            console.log(this.state.weatherData);
+            console.log(this.state.weatherData.current);
+            console.log(this.state.weatherData.current.weather[0]);
+            console.log(this.state.weatherData.current.weather[0].main);
         });
     }
 
@@ -23,14 +27,8 @@ export default class Weather extends React.Component {
                 <br></br>
                 <div className="weatherTable">
                     <h3>Current Weather</h3>
-                    <p>Weather data in state and printing to console</p>
-                    <br></br>
-                    <p>Correct routes are failing to render, no idea why...</p>
-                    <br></br>
-                    <p>Would like to know why this.state.weatherData.current.weather[0].main will not return that value</p>
-                    <br></br>
-                    <p>Partial credit on the bonus points?</p>
-                    <br></br>
+                    <p>{this.state.weatherData.current?.weather[0].main}</p>
+                    
                 </div>
             </div>
         )
